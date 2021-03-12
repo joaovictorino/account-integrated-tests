@@ -18,6 +18,12 @@
 		<java.version>11</java.version>
 	</properties>
 
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../bank</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -36,8 +42,7 @@
 			<groupId>com.bank.account</groupId>
 			<artifactId>bank</artifactId>
 			<version>1.0-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>/workspace/accountJava/bank/target/bank-1.0-SNAPSHOT.jar</systemPath>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

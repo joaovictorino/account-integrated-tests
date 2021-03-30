@@ -1,6 +1,8 @@
 name: Bank Spring Boot
 
 on:
+  schedule:
+    - cron: "0 0 * * *"
   push:
     branches: [ master ]
     paths:
@@ -17,6 +19,10 @@ jobs:
       with:
         java-version: 1.14
 
+    - name: Build Bank
+      working-directory: ./bank
+      run: mvn -B package --file pom.xml -DskipTests
+
     - name: Build Spring Boot
       working-directory: ./bankboot
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file pom.xml -DskipTests

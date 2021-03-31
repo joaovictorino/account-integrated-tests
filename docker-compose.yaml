@@ -17,6 +17,7 @@ services:
     build:
       context: .
       dockerfile: DockerfileBoot 
+    restart: always
     image: springapi
     networks:
       - springapi
